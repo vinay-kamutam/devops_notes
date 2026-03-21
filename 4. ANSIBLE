@@ -29,7 +29,7 @@ WORKER NODES: takes commands from ansible server and works according to it
 PLAYBOOK: conatins the code which is used to perform action.
 INVENTORY: conatains info about worker nodes and group.
 
-
+with the help ip address we can able identify the host name, and it is included in AD.
 
 SETUP:
 CREATE 5 SERVERS (1=ANSIBLE, 2=DEV, 2=TEST)
