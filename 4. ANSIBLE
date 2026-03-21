@@ -56,8 +56,10 @@ sudo dnf install python3 python3-pip python3-devel -y
 python3 --version
 pip3 --version
 
-amazon-linux-extras install ansible2 -y
-yum install python python-pip python-dlevel -y
+#only it will work in 2o22 aws t2 tier.
+#amazon-linux-extras install ansible2 -y
+#yum install python python-pip python-dlevel -y
+
 vim /etc/ansible/hosts (12)
 
 [dev]
