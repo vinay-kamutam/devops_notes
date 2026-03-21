@@ -175,6 +175,10 @@ yaml start with --- and end with ...
 we write it on list format.
 extension is .yml or .yaml
 
+YAML (YAML Ain't Markup Language) is a human-readable data serialization language commonly used for configuration files, 
+DevOps, and data exchange. It uses indentation-based structure rather than tags or braces, making it cleaner than JSON or XML.
+It supports key-value pairs, lists, and nested structures.
+
 PLAYBOOK1:
 
 vim raham.yml
