@@ -39,7 +39,7 @@ hostnamectl set-hostname ansible/dev-1/dev-2/test-1/test-2
 sudo -i
 
 
-passwd root
+passwd root     #vinay@123 
 vim /etc/ssh/sshd_config  (38 uncomment, 63 no=yes)
 systemctl restart sshd
 systemctl status sshd
@@ -102,6 +102,13 @@ ansible test[0] --list-hosts
 ansible all[-1] --list-hosts
 ansible all[1:3] --list-hosts
 
+
+How to export the histroy:
+
+we can give the format history. (it is used to auditing the comands.)
+export HISTTIMEFORMAT="%F %T"
+[root@ansible ~]# history
+
 HISTORY:
  1  2023-09-14 06:22:06 ansible all -a "yum install git -y"
     2  2023-09-14 06:24:25 ansible dev -a "yum install maven -y"
@@ -153,6 +160,8 @@ ansible all -m user -a "name=rajinikanth state=present"
 ansible all -m user -a "name=rajinikanth state=absent"
 ansible all -m copy -a "src=app.yml dest=/root"
 ansible all -a "ls /root"
+
+NOTE: application.yml is text file which contains the properties of the application.
 
 PLAYBOOKS:
 playbook is a collection of modules.
