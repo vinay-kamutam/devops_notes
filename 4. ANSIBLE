@@ -302,6 +302,8 @@ SHELL VS COMMAND VS RAW
 
 RAW >> COMMAND >> SHELL
 
+Raw module will perform all the actions like without python. 
+
 sed -i 's/install/remove/g' raham.yml
 
 - hosts: all
