@@ -302,7 +302,7 @@ SHELL VS COMMAND VS RAW
 
 RAW >> COMMAND >> SHELL
 
-Raw module will perform all the actions like without python. 
+the raw module executes commands directly via SSH without requiring Python on the target host 
 
 sed -i 's/install/remove/g' raham.yml
 
