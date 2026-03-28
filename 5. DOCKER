@@ -63,6 +63,14 @@ touch file1
 
 ctrl p q
 
+to go back to the bash container we need to use this comand:
+docker exec -it cont1 /bin/
+
+exec: gives you a shell inside the container.
+
+attach: shows the container’s main process output and is only useful when the container was started with 
+an interactive shell or a foreground process you want to observe
+
 docker images		: to list images
 docker start cont1	: to start cont1
 docker stop cont1	: to stop cont1
