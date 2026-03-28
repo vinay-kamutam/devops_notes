@@ -119,8 +119,13 @@ apt update -y
 apt install git maven apache2 tree -y
 touch file{1..5}
 
-docker commit cont1 raham
-docker run -it --name cont2 raham
+
+to copy the cont1 to new images vinay
+docker commit cont1 vinay
+docker run -it --name cont2 vinay
+
+A new images (vinay) will apper when you check 
+docker images
 
 check version now
 
