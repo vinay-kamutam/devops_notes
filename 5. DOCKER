@@ -488,6 +488,9 @@ it will be on yaml format.
 we use key-value pair (dictionary) (.yml or .yaml)
 used to manage multiple servivces with help of a file.
 
+NOTES:
+whenever we download a package on file format we need to move that file to "bin" folder 
+we need to give executables permission for that file to work as a comand.
 
 SETUP:
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
