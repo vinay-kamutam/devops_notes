@@ -575,6 +575,8 @@ manager node will create containers and send to worker nodes.
 worker nodes will take the container and manage them.
 manager node communicates with worker node by using token.
 
+note: when you down the worker node we need to copy the token one more time to rejoin the cluster to join node. 
+
 SETUP:
 1. create 3 servers (1=manager 2=worker) (all traffic is must)
 yum install docker -y
