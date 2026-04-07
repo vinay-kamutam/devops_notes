@@ -501,7 +501,7 @@ sudo chmod +x /usr/local/bin/docker-compose
  sudo yum install -y libxcrypt-compat
 
 
-docker-compose version
+docker-compose --version
 
 
 vim docker-compose.yml
