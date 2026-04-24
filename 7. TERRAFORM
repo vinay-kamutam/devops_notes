@@ -443,8 +443,15 @@ prevent_destroy = true
 }
 
 TERRAFORM FMT: used to provide the indentation for terraform.
+terraform fmt automatically formats HCL files with consistent 2-space indentation, aligned equals signs, proper spacing, 
+and canonical style. Version constraints in the terraform block lock Terraform, providers,
+or modules to compatible versions for reproducible builds.
 
+Version Constraints Syntax
+Specify in terraform or provider blocks using operators (>=, <=, ~>, =) and semantic versions:
 VERSION CONSTARINT: used to change the provider version.
+~> allows patch updates (e.g., ~> 5.40.0 gets 5.40.x but not 5.41.0).
+Multiple constraints use commas: >= 1.0, != 1.2.0.
 
 provider "aws" {
   region = "us-east-1"
