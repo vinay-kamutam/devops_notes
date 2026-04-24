@@ -409,6 +409,9 @@ Terraform Lifecycle:
 
 Prevent_destroy: used to keep secure our resources without destroying.
 
+Terraform's lifecycle { prevent_destroy = true } blocks accidental destruction of critical resources during plan or apply,
+protecting production databases, S3 buckets, or IAM roles from being deleted.
+
 provider "aws" {
 region = "us-east-1"
 }
