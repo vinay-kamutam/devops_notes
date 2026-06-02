@@ -469,30 +469,30 @@ export PATH=$PATH:/usr/local/bin/  -- > save and exit
 source .bashrc
 
 SETP-3: CREATEING BUCKET 
-aws s3api create-bucket --bucket devopsbyraham007.k8s.local --region us-east-1
-aws s3api put-bucket-versioning --bucket cloudanddevopsbyraham007.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
-export KOPS_STATE_STORE=s3://cloudanddevopsbyraham007.k8s.local
+aws s3api create-bucket --bucket devopsbyvinay907.k8s.local --region us-east-1
+aws s3api put-bucket-versioning --bucket devopsbyvinay907.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
+export KOPS_STATE_STORE=s3://devopsbyvinay907.k8s.local
 
 SETP-4: CREATING THE CLUSTER
-kops create cluster --name rahams.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.micro
-kops update cluster --name rahams.k8s.local --yes --admin
+kops create cluster --name vinay.k8s.local --zones us-east-1a --master-count=1 --master-size t3.micro --node-count=2 --node-size t3.micro
+kops update cluster --name vinay.k8s.local --yes --admin
 
 
 Suggestions:
  * list clusters with: kops get cluster
  * edit this cluster with: kops edit cluster rahams.k8s.local
- * edit your node instance group: kops edit ig --name=rahams.k8s.local nodes-us-east-1a
- * edit your master instance group: kops edit ig --name=rahams.k8s.local master-us-east-1a
+ * edit your node instance group: kops edit ig --name=vinay.k8s.local nodes-us-east-1a
+ * edit your master instance group: kops edit ig --name=vinay.k8s.local master-us-east-1a
 
 
 ADMIN ACTIVITIES:
 To scale the worker nodes:
-kops edit ig --name=rahams.k8s.local nodes-us-east-1a
-kops update cluster --name rahams.k8s.local --yes --admin 
+kops edit ig --name=vinay.k8s.local nodes-us-east-1a
+kops update cluster --name vinay.k8s.local --yes --admin 
 kops rolling-update cluster --yes
 
 kubectl describe node node_id
-kops delete cluster --name rahams.k8s.local --yes
+kops delete cluster --name vinay.k8s.local --yes
 
 HISTORY:
 1  aws configure
@@ -507,25 +507,25 @@ HISTORY:
    10  source .bashrc
    11  kops version
    12  kubectl version
-   13  aws s3api create-bucket --bucket devopsbyraham007.k8s.local --region us-east-1
-   14  aws s3api create-bucket --bucket cloudanddevopsbyraham007.k8s.local --region us-east-1
-   15  aws s3api put-bucket-versioning --bucket cloudanddevopsbyraham007.k8s.local --region us-east-1 --vers                                                           ioning-configuration Status=Enabled
-   16  export KOPS_STATE_STORE=s3://cloudanddevopsbyraham007.k8s.local
-   17  aws s3api create-bucket --bucket devopsbyraham007.k8s.local --region us-east-1
-   18  aws s3api put-bucket-versioning --bucket cloudanddevopsbyraham007.k8s.local --region us-east-1 --vers                                                           ioning-configuration Status=Enabled
-   19  export KOPS_STATE_STORE=s3://cloudanddevopsbyraham007.k8s.local
-   20  kops create cluster --name rahams.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medi                                                           um --node-count=2 --node-size t2.micro
-   21  kops update cluster --name rahams.k8s.local --yes --admin
+   13  aws s3api create-bucket --bucket devopsbyvinay907.k8s.local --region us-east-1
+   14  aws s3api create-bucket --bucket devopsbyvinay907.k8s.local --region us-east-1
+   15  aws s3api put-bucket-versioning --bucket devopsbyvinay907.k8s.local --region us-east-1 --vers                                                           ioning-configuration Status=Enabled
+   16  export KOPS_STATE_STORE=s3://devopsbyvinay907.k8s.local
+   17  aws s3api create-bucket --bucket devopsbyvinay907.k8s.local --region us-east-1
+   18  aws s3api put-bucket-versioning --bucket devopsbyvinay907.k8s.local --region us-east-1 --vers                                                           ioning-configuration Status=Enabled
+   19  export KOPS_STATE_STORE=s3://devopsbyvinay907.k8s.local
+   20  kops create cluster --name vinay.k8s.local --zones us-east-1a --master-count=1 --master-size t3.micro                                                           um --node-count=2 --node-size t2.micro
+   21  kops update cluster --name vinay.k8s.local --yes --admin
    22  kops validate cluster --wait 10m
    23  kops get cluster
    24  kubectl get no
-   25  kops edit ig --name=rahams.k8s.local nodes-us-east-1a
-   26  kops update cluster --name rahams.k8s.local --yes --admin
+   25  kops edit ig --name=vinay.k8s.local nodes-us-east-1a
+   26  kops update cluster --name vinay.k8s.local --yes --admin
    27  kops rolling-update cluster --yes
-   28  kops edit ig --name=rahams.k8s.local master-us-east-1a
-   29  kops update cluster --name rahams.k8s.local --yes --admin
+   28  kops edit ig --name=vinay.k8s.local master-us-east-1a
+   29  kops update cluster --name vinay.k8s.local --yes --admin
    30  kops rolling-update cluster --yes
-   31  kops edit ig --name=rahams.k8s.local nodes-us-east-1a
+   31  kops edit ig --name=vinay.k8s.local nodes-us-east-1a
    32  kubectl get no
    33  vim abc.yml
    34  kubectl get po
